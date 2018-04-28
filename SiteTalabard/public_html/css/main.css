@@ -1,0 +1,230 @@
+
+
+/* ==========================================================================
+    mon site custom styles
+   ========================================================================== */
+.btn{
+    margin: 2%;
+}
+footer {
+    margin: 50px 0;
+    text-align: center;
+}
+
+
+
+.image_moi{
+    max-width: 30%;
+    height: auto;
+    float:left;
+    margin-right: 5%;
+}
+
+body {
+    font-size: 1.5em; /* 1.5x default size */
+}
+#description{
+    padding: 2% 2%;
+    margin-bottom: 30px;
+    color: inherit;
+    background-color: #eee;
+}
+
+
+@media only screen and (min-width : 240px) {
+    #img-competence{
+        max-width: 50%;
+        height: auto;
+        margin-bottom: 20%;
+    }
+    #img_inf_imp{
+        max-width: 70%;
+        height: auto;
+        margin-left: 15%;
+    }
+    .text_Info_imp{
+        font-size: 1.0em;
+    }
+    body {
+        padding-top: 7%;
+    }
+    #button{
+        white-space: normal !important;
+    word-wrap: break-word;
+    font-size: 6vw;
+    }
+     #image_contact{
+        width: 20%;
+        height: auto;
+        float:left;
+        margin-right: 5%;
+    }
+}
+@media only screen and (min-width : 320px) {
+    #img-competence{
+        max-width: 50%;
+        height: auto;
+        margin-bottom: 20%;
+    }
+    #img_inf_imp{
+        max-width: 70%;
+        height: auto;
+        margin-left: 15%;
+    }
+    .text_Info_imp{
+        font-size: 1.0em;
+    }
+    body {
+        padding-top: 7%;
+    }
+    #button{
+        white-space: normal !important;
+    word-wrap: break-word;
+    font-size: 6vw;
+    }
+     #image_contact{
+        width: 20%;
+        height: auto;
+        float:left;
+        margin-right: 5%;
+    }
+    
+}
+
+/* Extra Small Devices, Phones */ 
+@media only screen and (min-width : 480px) {
+    #img-competence{
+        max-width: 40%;
+        height: auto;
+        margin-bottom: 20%;
+    }
+    #img_inf_imp{
+        max-width: 30%;
+        height: auto;
+        margin-left: 35%;
+    }
+    .text_Info_imp{
+        font-size: 1.0em;
+    }
+    body {
+        padding-top: 5%;
+    }
+    #button{
+        white-space: normal !important;
+    word-wrap: break-word;
+    font-size: 4vw;
+    }
+     #image_contact{
+        width: 15%;
+        height: auto;
+        float:left;
+        margin-right: 5%;
+    }
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
+    #img-competence{
+        max-width: 30%;
+        height: auto;
+        margin-bottom: 20%;
+    }
+    #img_inf_imp{
+        max-width: 70%;
+        height: auto;
+        margin-left: 17%;
+    }
+    .text_Info_imp{
+        font-size: 1.0em;
+    }
+    body {
+        padding-top: 5%;
+    }
+    #button{
+        white-space: normal !important;
+    word-wrap: break-word;
+    font-size: 3vw;
+    }
+     #image_contact{
+        width: 10%;
+        height: auto;
+        float:left;
+        margin-right: 5%;
+    }
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {
+    #img-competence{
+        max-width: 30%;
+        height: auto;
+        margin-bottom: 20%;
+    }
+    #img_inf_imp{
+        max-width: 60%;
+        height: auto;
+        margin-left: 20%;
+    }
+    .text_Info_imp{
+        font-size: 1.0em;
+    }
+    body {
+        padding-top: 3%;
+    }
+    #button{
+        white-space: normal !important;
+    word-wrap: break-word;
+    font-size: 1vw;
+    }
+     #image_contact{
+        width: 7%;
+        height: auto;
+        float:left;
+        margin-right: 5%;
+    }
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px){
+    #img-competence{
+        max-width: 30%;
+        height: auto;
+        margin-bottom: 20%;
+    }
+    #img_inf_imp{
+        max-width: 70%;
+        height: auto;
+        margin-left: 15%;
+    }
+    .text_Info_imp{
+        font-size: 1.0em;
+    }
+    body {
+        padding-top: 3%;
+    }
+    #button{
+        white-space: normal !important;
+    word-wrap: break-word;
+    font-size: 1vw;
+    
+    }
+    #image_contact{
+        width: 5%;
+        height: auto;
+        float:left;
+        margin-right: 5%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

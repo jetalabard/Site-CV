@@ -1,0 +1,255 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Jérémy Talabard</title>
+        <link rel="shortcut icon" type="image/ico" href="favicon.ico"/>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/navbar.css">
+        <script src="js/jquery.js"></script> 
+        <script src="js/main.js"></script> 
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.4/angular.min.js"></script>
+    </head>
+    <body ng-app="app">
+        <!-- définition de la bar du haut-->
+        <!-- Navigation -->
+        <div class="container">
+            <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+                <div class="container-fluid">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" 
+                                data-target="#bs-example-navbar-collapse-1" 
+                                aria-expanded="false" aria-controls="bs-example-navbar-collapse-1">
+                            <span class="glyphicon glyphicon-menu-hamburger" style="color:white;font-size: 1.5em;"></span>
+                        </button>
+                        <a class="navbar-brand" href="index.html" style="position: relative;top: 0.5em;">
+                            <i style="color: white;font-size: 1.5em;"> Jérémy Talabard</i>
+                        </a>
+                    </div>
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav">
+                            <li class="li_menu">
+                                <a href="index.html"> 
+                                    <span class="glyphicon glyphicon-home" style="color: white;margin-right: 1%;"></span>
+                                    Accueil
+                                </a>
+                            </li>
+                            <li class="li_menu"> 
+                                <a href="formation.html">
+                                    <span class="glyphicon glyphicon-book" style="color: white;margin-right: 1%;"></span>
+                                    Mes formations</a>
+                            </li>
+                            <li class="li_menu">
+                                <a  href="projets.html">
+                                    <span class="glyphicon glyphicon-list-alt" style="color: white;margin-right: 1%;"></span>
+                                    Projets/Stages</a>
+                            </li>
+                            <li class="li_menu">
+                                <a  href="loisirs.html">
+                                    <span class="glyphicon glyphicon-sunglasses" style="color: white;margin-right: 1%;"></span>
+                                    Mes loisirs</a>
+                            </li>
+                            <li class="li_menu">
+                                <a  href="emplois.html">
+                                    <span class="glyphicon glyphicon-star-empty" style="color: white;margin-right: 1%;"></span>
+                                    Mes emplois</a>
+                            </li>
+                            <li class="li_menu">
+                                <a href="contact.html"> <span class="glyphicon glyphicon-envelope" style="color: white;margin-right: 1%;"></span>
+                                    Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- /.navbar-collapse -->
+                </div>
+            </nav>
+            <!fin de definition bar du haut-->
+
+            <div class="container">
+                <!-- Page Heading -->
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1 class="page-header"><small>Projets/Stages</small></h1>
+                    </div>
+                </div>
+                <!-- /.row -->
+
+                <!-- Project One -->
+                <div class="row">
+                    <div class="col-md-7">
+                        <img class="img-responsive" src="img/osw.png"  alt="">
+                    </div>
+                    <div class="col-md-5">
+                        <h3><b><u>Stage Conseil Général du Puy-de-Dôme</u></b></h3>
+                        <h4>Etude de différentes possibilités pour adapter un site internet existant
+                            vers un environnement mobile</h4>
+                        <h4><small><i>Février 2015-Juillet 2015</i></small></h4>
+                        <p>Au cours de ce stage, j'ai réalisé des web services 
+                            permettant d'alimenter en données une future application mobile.
+                            Pour réaliser cette application, j'ai étudié différentes possibilités 
+                            afin de montrer toutes les technologies mobiles au Conseil Général comme le responsive design, 
+                            une application native Android ou encore une application hybride en Ionic et Cordova.
+                        </p>
+                        <div class="row" >
+                            <div class="col-md-6 col-sm-5">
+                                <a class="btn btn-primary btn-lg responsive-width" id="button" href='documents/Talabard_Jérémy_Rapport_Stage CG.pdf' download >Rapport de Stage<span class="glyphicon glyphicon-chevron-right"></span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.row -->
+
+                <hr>
+
+                <!-- Project Two -->
+                <div class="row">
+                    <div class="col-md-7">
+                        <img class="img-responsive" src="img/poker.png" alt="">
+                    </div>
+                    <div class="col-md-5">
+                        <h3><b><u>Réalisation d'un jeu de poker en réseau</u></b></h3>
+                        <h4>Création d'un serveur sur ordinateur servant de table de jeu, création d'une application mobile permettant d'intéragir avec le serveur et d'autres joueurs.</h4>
+                        <h4><small><i>Octobre 2014 - Décembre 2014</i></small></h4>
+                        <p>Dans le cadre de ma licence professionnelle, j'ai réalisé un projet avec 2 autres collègues. 
+                            Nous avons suivi la méthode de travail Scrum. En dix semaines, nous avons découvert JavaFx et réalisé la table de jeu dans ce langage. 
+                            Nous avons implémenté quasiment toutes les règles du Texas Holdem Poker. Et nous pouvions jouer une partie à plusieurs grâce à une application Android qui permet de voir sa main, 
+                            de miser mais aussi de se coucher en faisant glisser les cartes pour qu'elles arrivent sur la table de jeu. </p>
+                        <div class="row" >
+                            <div class="col-lg-6 col-md-6 col-sm-5">
+                                <a class="btn btn-primary btn-lg responsive-width"  id="button" href="documents/Talabard_Jérémy_Poker_Rapport.pdf" download>Rapport du Projet<span class="glyphicon glyphicon-chevron-right"></span></a>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-5">
+                                <a class="btn btn-default btn-lg responsive-width" id="button" href="documents/Talabard_Jérémy_Poker_application.apk">Application Android<span class="glyphicon glyphicon-chevron-right"></span></a>
+                            </div>
+                            <div class="col-lg-9 col-md-6 col-sm-5">
+                                <a class="btn btn-default btn-lg responsive-width" id="button" href="documents/Talabard_Jérémy_Poker table.zip" download>Code et éxécutable de la table de jeu<span class="glyphicon glyphicon-chevron-right"></span></a>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+                <!-- /.row -->
+
+                <hr>
+
+                <!-- Project Three -->
+                <div class="row">
+                    <div class="col-md-7">
+                        <img class="img-responsive" src="img/tbf.png" alt="" >
+                    </div>
+                    <div class="col-md-5">
+                        <h3><b><u>Stage chez Transport Blanquet et Fils (63)</u></b></h3>
+                        <h4>Amélioration d'un outil de traçabilité</h4>
+                        <h4><small><i>Mars 2014-Mai 2014</i></small></h4>
+                        <p>L'outil de traçabilité est utilisé par des chauffeurs pour scanner 
+                            des sacoches bancaires de sorte à connaître son itinéraire et l'heure de passage.
+                            Il a donc fallu reprendre un site internet développé avec le Framework PHP Yii, et 
+                            aussi améliorer l'application faite sur des appareils Windows Mobile en Visual Basic
+                            en apportant plus de fonctionnalités.</p>
+                        <div class="row" >
+                            <div class="col-lg-6 col-md-4 col-sm-5">
+                                <a class="btn btn-primary btn-lg responsive-width" id="button" href="documents/Talabard_Jérémy_Rapport_Stage TBF.pdf" download>Rapport du Stage<span class="glyphicon glyphicon-chevron-right"></span></a></div>
+                        </div>
+                    </div>
+                </div>
+
+                <hr>
+                <!-- Project Three -->
+                <div class="row">
+                    <div class="col-md-7">
+                        <img class="img-responsive" src="img/Microsoft-VBA-Large.png" alt="">
+                    </div>
+                    <div class="col-md-5">
+                        <h3><b><u>Gestionnaire de planning chez TBF</u></b></h3>
+                        <h4>Améliaration d'un outil de planning sous excel</h4>
+                        <h4><small><i>Septembre 2014</i></small></h4>
+                        <p>Automatisation de tâches répétitives sous excel grâce à des macros en Visual Basic pour Applications.</p>
+                        <div class="row" >
+                            <div class="col-md-4 col-sm-5">
+                                <a class="btn btn-primary btn-lg responsive-width" id="button" href="documents/Talabard_Jérémy_Planning.rar" download>Projet<span class="glyphicon glyphicon-chevron-right"></span></a></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.row -->
+
+                <hr>
+
+                <!-- Project Four -->
+                <div class="row">
+                    <div class="col-md-7">
+                        <img class="img-responsive" src="img/Jretouch.png" alt="">
+                    </div>
+                    <div class="col-md-5">
+                        <h3><b><u>JRetouch</u></b></h3>
+                        <h4>Réalisation d'un logiciel de retouche d'images</h4>
+                        <h4><small><i>Octobre 2013-Mars 2014</i></small></h4>
+                        <p>
+                            Au cours de mon DUT, j'ai réalisé un projet par groupe de quatre.
+                            Le but était de faire un logiciel en Java (Swing) en étudiant tout les algorithmes permettant 
+                            la transformation d'une image, de rendre ce logiciel "User friendly" 
+                            et d'apprendre à réaliser un logiciel en groupe tout en mettant au courant 
+                            notre tuteur de l'avancement du projet grâce à un blog.
+                        </p>
+                        <div class="row" >
+                            <div class="col-lg-5 col-md-4 col-sm-5">
+                                <a class="btn btn-primary btn-lg responsive-width" id="button" onclick="redirectToNewPage('http://projetiutretoucheurimages.blogspot.fr/');">Accès au Blog<span class="glyphicon glyphicon-chevron-right"></span></a>
+                            </div>
+                            <div class="col-lg-5 col-md-6 col-sm-5">
+                                <a class="btn btn-default btn-lg responsive-width" id="button" href="documents/Talabard_Jérémy_Rapport_Retoucheur image.pdf" download>Rapport du Projet<span class="glyphicon glyphicon-chevron-right"></span></a>
+                            </div>
+                            <div class="col-lg-6 col-md-4 col-sm-5">
+                                <a class="btn btn-default btn-lg responsive-width" id="button" href="documents/Talabard_Jérémy_JRetouch.7z" download>Code et éxécutable<span class="glyphicon glyphicon-chevron-right"></span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.row -->
+
+                <hr>
+                <footer>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <p>Copyright &copy; Jérémy Talabard 2015</p>
+                        </div>
+                    </div>
+                    <!-- /.row -->
+                </footer>
+            </div>
+        </div>
+
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.js"><\/script>')</script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/main.js"></script>
+
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <script>
+            (function (b, o, i, l, e, r) {
+                b.GoogleAnalyticsObject = l;
+                b[l] || (b[l] =
+                        function () {
+                            (b[l].q = b[l].q || []).push(arguments)
+                        });
+                b[l].l = +new Date;
+                e = o.createElement(i);
+                r = o.getElementsByTagName(i)[0];
+                e.src = '//www.google-analytics.com/analytics.js';
+                r.parentNode.insertBefore(e, r)
+            }(window, document, 'script', 'ga'));
+            ga('create', 'UA-XXXXX-X', 'auto');
+            ga('send', 'pageview');</script>
+    </body>
+</html>

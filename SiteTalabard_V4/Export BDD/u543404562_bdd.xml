@@ -1,0 +1,1215 @@
+
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+- phpMyAdmin XML Dump
+- version 3.5.2.2
+- http://www.phpmyadmin.net
+-
+- Host: localhost
+- Generation Time: Jun 15, 2016 at 03:49 PM
+- Server version: 10.0.20-MariaDB-log
+- PHP Version: 5.2.17
+-->
+
+<pma_xml_export version="1.0" xmlns:pma="http://www.phpmyadmin.net/some_doc_url/">
+    <!--
+    - Structure schemas
+    -->
+    <pma:structure_schemas>
+        <pma:database name="u543404562_bdd" collation="utf8_unicode_ci" charset="utf8">
+            <pma:table name="competence">
+                CREATE TABLE `competence` (
+                  `name` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+                  `type` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+                  `image` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+                  `ID` int(11) NOT NULL AUTO_INCREMENT,
+                  PRIMARY KEY (`ID`)
+                ) ENGINE=MyISAM AUTO_INCREMENT=40 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+            </pma:table>
+            <pma:table name="description">
+                CREATE TABLE `description` (
+                  `intitule` varchar(2000) COLLATE utf8_unicode_ci NOT NULL,
+                  `photo` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+                  `resume` varchar(2000) COLLATE utf8_unicode_ci NOT NULL,
+                  `name` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+                  `email` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+                  `tel` varchar(10) COLLATE utf8_unicode_ci NOT NULL,
+                  `faceBookLink` varchar(200) COLLATE utf8_unicode_ci NOT NULL,
+                  `linkedinLink` varchar(200) COLLATE utf8_unicode_ci NOT NULL,
+                  `ID` int(11) NOT NULL AUTO_INCREMENT,
+                  `adress` varchar(200) COLLATE utf8_unicode_ci NOT NULL,
+                  PRIMARY KEY (`ID`)
+                ) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+            </pma:table>
+            <pma:table name="document">
+                CREATE TABLE `document` (
+                  `name` varchar(200) COLLATE utf8_unicode_ci NOT NULL,
+                  `libl` varchar(200) COLLATE utf8_unicode_ci NOT NULL,
+                  `link` varchar(200) COLLATE utf8_unicode_ci NOT NULL,
+                  `ID` int(11) NOT NULL AUTO_INCREMENT,
+                  `type` varchar(10) COLLATE utf8_unicode_ci NOT NULL,
+                  PRIMARY KEY (`ID`)
+                ) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+            </pma:table>
+            <pma:table name="formation">
+                CREATE TABLE `formation` (
+                  `title` varchar(200) COLLATE utf8_unicode_ci NOT NULL,
+                  `subtitle` varchar(200) COLLATE utf8_unicode_ci NOT NULL,
+                  `date` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+                  `resume` varchar(2000) COLLATE utf8_unicode_ci NOT NULL,
+                  `ID` int(11) NOT NULL AUTO_INCREMENT,
+                  `idlinks` int(11) NOT NULL,
+                  `photo` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+                  PRIMARY KEY (`ID`)
+                ) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+            </pma:table>
+            <pma:table name="head">
+                CREATE TABLE `head` (
+                  `ID` int(11) NOT NULL AUTO_INCREMENT,
+                  `title` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+                  `subtitle` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+                  `subsubtitle` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+                  `resume` varchar(2000) COLLATE utf8_unicode_ci NOT NULL,
+                  PRIMARY KEY (`ID`)
+                ) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+            </pma:table>
+            <pma:table name="hobie">
+                CREATE TABLE `hobie` (
+                  `photo` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+                  `title` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+                  `subtitle` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+                  `date` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+                  `resume` varchar(2000) COLLATE utf8_unicode_ci NOT NULL,
+                  `idlinks` int(11) NOT NULL,
+                  `ID` int(11) NOT NULL AUTO_INCREMENT,
+                  PRIMARY KEY (`ID`)
+                ) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+            </pma:table>
+            <pma:table name="image">
+                CREATE TABLE `image` (
+                  `ID` int(11) NOT NULL AUTO_INCREMENT,
+                  `name` varchar(200) COLLATE utf8_unicode_ci NOT NULL,
+                  PRIMARY KEY (`ID`)
+                ) ENGINE=MyISAM AUTO_INCREMENT=78 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+            </pma:table>
+            <pma:table name="job">
+                CREATE TABLE `job` (
+                  `photo` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+                  `title` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+                  `subtitle` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+                  `date` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+                  `resume` varchar(2000) COLLATE utf8_unicode_ci NOT NULL,
+                  `idlinks` int(11) NOT NULL,
+                  `ID` int(11) NOT NULL AUTO_INCREMENT,
+                  PRIMARY KEY (`ID`)
+                ) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+            </pma:table>
+            <pma:table name="link">
+                CREATE TABLE `link` (
+                  `importance` varchar(1) COLLATE utf8_unicode_ci NOT NULL,
+                  `url` varchar(200) COLLATE utf8_unicode_ci NOT NULL,
+                  `link` varchar(200) COLLATE utf8_unicode_ci NOT NULL,
+                  `libllink` varchar(200) COLLATE utf8_unicode_ci NOT NULL,
+                  `ID` int(11) NOT NULL AUTO_INCREMENT,
+                  `idLinks` int(11) NOT NULL,
+                  `libl` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+                  PRIMARY KEY (`ID`)
+                ) ENGINE=MyISAM AUTO_INCREMENT=22 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+            </pma:table>
+            <pma:table name="links">
+                CREATE TABLE `links` (
+                  `ID` int(11) NOT NULL AUTO_INCREMENT,
+                  PRIMARY KEY (`ID`)
+                ) ENGINE=MyISAM AUTO_INCREMENT=26 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+            </pma:table>
+            <pma:table name="project">
+                CREATE TABLE `project` (
+                  `title` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+                  `photo` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+                  `subtitle` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+                  `resume` varchar(2000) COLLATE utf8_unicode_ci NOT NULL,
+                  `idlinks` int(11) NOT NULL,
+                  `date` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+                  `ID` int(11) NOT NULL AUTO_INCREMENT,
+                  PRIMARY KEY (`ID`)
+                ) ENGINE=MyISAM AUTO_INCREMENT=12 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+            </pma:table>
+            <pma:table name="user">
+                CREATE TABLE `user` (
+                  `id` varchar(15) COLLATE utf8_unicode_ci NOT NULL,
+                  `password` varchar(15) COLLATE utf8_unicode_ci NOT NULL,
+                  PRIMARY KEY (`id`)
+                ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+            </pma:table>
+        </pma:database>
+    </pma:structure_schemas>
+
+    <!--
+    - Database: 'u543404562_bdd'
+    -->
+    <database name="u543404562_bdd">
+        <!-- Table competence -->
+        <table name="competence">
+            <column name="name">Android</column>
+            <column name="type">language</column>
+            <column name="image">Android-Icon.png</column>
+            <column name="ID">1</column>
+        </table>
+        <table name="competence">
+            <column name="name">Windows Phone</column>
+            <column name="type">language</column>
+            <column name="image">Windows-phone-logo.png</column>
+            <column name="ID">2</column>
+        </table>
+        <table name="competence">
+            <column name="name">Ios</column>
+            <column name="type">language</column>
+            <column name="image">IOS.png</column>
+            <column name="ID">3</column>
+        </table>
+        <table name="competence">
+            <column name="name">Objective-C</column>
+            <column name="type">language</column>
+            <column name="image">objective-c.png</column>
+            <column name="ID">4</column>
+        </table>
+        <table name="competence">
+            <column name="name">Java</column>
+            <column name="type">language</column>
+            <column name="image">java.png</column>
+            <column name="ID">37</column>
+        </table>
+        <table name="competence">
+            <column name="name">C#</column>
+            <column name="type">language</column>
+            <column name="image">csharp.png</column>
+            <column name="ID">6</column>
+        </table>
+        <table name="competence">
+            <column name="name">Yaml</column>
+            <column name="type">language</column>
+            <column name="image">yaml.png</column>
+            <column name="ID">7</column>
+        </table>
+        <table name="competence">
+            <column name="name">Jolla</column>
+            <column name="type">language</column>
+            <column name="image">jolla-sailfish-logo.png</column>
+            <column name="ID">8</column>
+        </table>
+        <table name="competence">
+            <column name="name">Cordova</column>
+            <column name="type">language</column>
+            <column name="image">cordova.png</column>
+            <column name="ID">9</column>
+        </table>
+        <table name="competence">
+            <column name="name">JavaFx</column>
+            <column name="type">language</column>
+            <column name="image">JavaFx.png</column>
+            <column name="ID">10</column>
+        </table>
+        <table name="competence">
+            <column name="name">QtMobile</column>
+            <column name="type">language</column>
+            <column name="image">qtmobile.png</column>
+            <column name="ID">11</column>
+        </table>
+        <table name="competence">
+            <column name="name">QML</column>
+            <column name="type">language</column>
+            <column name="image">qml.png</column>
+            <column name="ID">12</column>
+        </table>
+        <table name="competence">
+            <column name="name">Javascript</column>
+            <column name="type">language</column>
+            <column name="image">logo_js.png</column>
+            <column name="ID">13</column>
+        </table>
+        <table name="competence">
+            <column name="name">AngularJs</column>
+            <column name="type">language</column>
+            <column name="image">angularjs.png</column>
+            <column name="ID">14</column>
+        </table>
+        <table name="competence">
+            <column name="name">Bootstrap</column>
+            <column name="type">language</column>
+            <column name="image">bootstrap.png</column>
+            <column name="ID">15</column>
+        </table>
+        <table name="competence">
+            <column name="name">Php</column>
+            <column name="type">language</column>
+            <column name="image">php.png</column>
+            <column name="ID">16</column>
+        </table>
+        <table name="competence">
+            <column name="name">Css</column>
+            <column name="type">language</column>
+            <column name="image">css.png</column>
+            <column name="ID">17</column>
+        </table>
+        <table name="competence">
+            <column name="name">SQL</column>
+            <column name="type">language</column>
+            <column name="image">sql.png</column>
+            <column name="ID">18</column>
+        </table>
+        <table name="competence">
+            <column name="name">HTML5</column>
+            <column name="type">language</column>
+            <column name="image">html5.png</column>
+            <column name="ID">19</column>
+        </table>
+        <table name="competence">
+            <column name="name">Yii Framework PHP</column>
+            <column name="type">language</column>
+            <column name="image">yii_framework.png</column>
+            <column name="ID">20</column>
+        </table>
+        <table name="competence">
+            <column name="name">Windows Mobile</column>
+            <column name="type">language</column>
+            <column name="image">Windows-Mobile-Logo.png</column>
+            <column name="ID">21</column>
+        </table>
+        <table name="competence">
+            <column name="name">Visual Basic for Application</column>
+            <column name="type">language</column>
+            <column name="image">vba.png</column>
+            <column name="ID">22</column>
+        </table>
+        <table name="competence">
+            <column name="name">Visual basic</column>
+            <column name="type">language</column>
+            <column name="image">vb.png</column>
+            <column name="ID">23</column>
+        </table>
+        <table name="competence">
+            <column name="name">Python</column>
+            <column name="type">language</column>
+            <column name="image">python-logo.png</column>
+            <column name="ID">24</column>
+        </table>
+        <table name="competence">
+            <column name="name">C</column>
+            <column name="type">language</column>
+            <column name="image">logo_c.png</column>
+            <column name="ID">25</column>
+        </table>
+        <table name="competence">
+            <column name="name">C++</column>
+            <column name="type">language</column>
+            <column name="image">cplusplus.png</column>
+            <column name="ID">26</column>
+        </table>
+        <table name="competence">
+            <column name="name">Agile</column>
+            <column name="type">tool</column>
+            <column name="image">agile.png</column>
+            <column name="ID">39</column>
+        </table>
+        <table name="competence">
+            <column name="name">Merise</column>
+            <column name="type">tool</column>
+            <column name="image">merise.png</column>
+            <column name="ID">38</column>
+        </table>
+        <table name="competence">
+            <column name="name">Visual Studio</column>
+            <column name="type">tool</column>
+            <column name="image">Visual-Studio.png</column>
+            <column name="ID">29</column>
+        </table>
+        <table name="competence">
+            <column name="name">Android Studio</column>
+            <column name="type">tool</column>
+            <column name="image">studio-logo.png</column>
+            <column name="ID">36</column>
+        </table>
+        <table name="competence">
+            <column name="name">Plsql</column>
+            <column name="type">language</column>
+            <column name="image">plsql.png</column>
+            <column name="ID">31</column>
+        </table>
+        <table name="competence">
+            <column name="name">Netbeans</column>
+            <column name="type">tool</column>
+            <column name="image">netbeans.png</column>
+            <column name="ID">32</column>
+        </table>
+        <table name="competence">
+            <column name="name">Eclipse</column>
+            <column name="type">tool</column>
+            <column name="image">eclipse.png</column>
+            <column name="ID">33</column>
+        </table>
+        <table name="competence">
+            <column name="name">Xcode</column>
+            <column name="type">tool</column>
+            <column name="image">Logo_xcode.png</column>
+            <column name="ID">34</column>
+        </table>
+        <!-- Table description -->
+        <table name="description">
+            <column name="intitule">Description Générale</column>
+            <column name="photo">image_anonyme.png</column>
+            <column name="resume">Je m'appelle Jérémy Talabard. Je suis originaire de Vendat dans l'Allier (03), j'ai 21 ans. J'ai eu mon Baccalauréat Scientifique en 2012. Suite à cela j'ai fait un DUT Informatique et une licence professionnelle développement d'applications pour plateformes mobiles à Clermont-Ferrand. Je suis actuellement en Licence 3 informatique dans le but de faire un Master. Je suis quelqu'un d'autonome et qui n'a pas peur du travail. Grâce aux différents stages et emplois que j'ai réalisés, j'ai acquît une bonne expérience dans le milieu professionnel mais surtout en développement informatique. Mon domaine informatique favori est le développement d'applications mobiles car leurs intérêts dans le monde d'aujourd'hui est capital aussi bien pour les particuliers que les professionnels.</column>
+            <column name="name">Talabard Jérémy</column>
+            <column name="email">jeremy.talabard@hotmail.fr</column>
+            <column name="tel">0677189651</column>
+            <column name="faceBookLink">https://www.facebook.com/jeremy.talabard</column>
+            <column name="linkedinLink">https://www.linkedin.com/profile/view?id=AAIAABYFOeIBA2k2B-Rqw86SJGu1IWol7UksASI&amp;trk=nav_responsive_tab_profile</column>
+            <column name="ID">1</column>
+            <column name="adress">39 avenue des Landais 63000 Clermont-Ferrand</column>
+        </table>
+        <!-- Table document -->
+        <table name="document">
+            <column name="name">Talabard_Jérémy_CV_original.pdf</column>
+            <column name="libl">CV Coloré</column>
+            <column name="link">https://www.dropbox.com/s/civatb6142dsc4q/Talabard_J%C3%A9r%C3%A9my_CV_original.pdf?dl=1</column>
+            <column name="ID">1</column>
+            <column name="type">cv</column>
+        </table>
+        <table name="document">
+            <column name="name">Talabard_Jérémy_CV_classique.pdf</column>
+            <column name="libl">CV Classique</column>
+            <column name="link">https://www.dropbox.com/s/t09lna6yxnfa51i/Talabard_J%C3%A9r%C3%A9my_CV_classique.pdf?dl=1</column>
+            <column name="ID">2</column>
+            <column name="type">cv</column>
+        </table>
+        <!-- Table formation -->
+        <table name="formation">
+            <column name="title">Baccalauréat Générale scientifique (SI)</column>
+            <column name="subtitle">Lycée Albert Londres Cusset (03)</column>
+            <column name="date">2009-2012</column>
+            <column name="resume">Le baccalauréat scientifique implique des capacités de concentration, de rigueur, de raisonnement et un goût de l'expérimentation. Son objectif est de développer une réelle culture scientifique fondée sur des connaissances et une approche expérimentale des sciences. </column>
+            <column name="ID">1</column>
+            <column name="idlinks">4</column>
+            <column name="photo">bacS.jpg</column>
+        </table>
+        <table name="formation">
+            <column name="title">DUT informatique</column>
+            <column name="subtitle">Université D'Auvergne Aubière(63)</column>
+            <column name="date">2012-2014</column>
+            <column name="resume">Le DUT informatique est un diplôme universitaire national à bac + 2 (sur quatre semestres) conduisant essentiellement au métier de développeur de logiciels dans différents langages (C, C++, JAVA, C#, PHP, …), d'administrateur de systèmes d'exploitation, de bases de données et de réseaux. Il est aussi un excellent diplôme généraliste, alliant la théorie à la pratique.</column>
+            <column name="ID">2</column>
+            <column name="idlinks">5</column>
+            <column name="photo">iut.jpg</column>
+        </table>
+        <table name="formation">
+            <column name="title">Licence Professionnelle Génie logiciel, développement d'applications pour plateformes mobiles</column>
+            <column name="subtitle">Université D'Auvergne Aubière(63)</column>
+            <column name="date">2014-2015</column>
+            <column name="resume">Cette licence spécialise des informaticiens sur les thèmes du génie logiciel et de l'informatique mobile. Ainsi, à l'issue de la licence, l'analyse et le développement fiable de logiciels auront été détaillés avec le Java, le C#, le C++ et l'ObjectiveC. Des supports variés de développement sont à la disposition des étudiants afin qu'ils soient capables de développer pour les téléphones portables et les tablettes du marché (Windows phone, Android, IOs), ainsi que pour de supports plus exceptionnels (Sailfish, QT mobile).</column>
+            <column name="ID">3</column>
+            <column name="idlinks">6</column>
+            <column name="photo">dev_mobile.png</column>
+        </table>
+        <table name="formation">
+            <column name="title">Licence 3 Informatique </column>
+            <column name="subtitle">Université Blaise Pascal à Aubière(63)</column>
+            <column name="date">2015-2016</column>
+            <column name="resume">L'objectif de la licence Informatique est de donner une connaissance approfondie des systèmes informatiques, de leurs applications et des méthodes de conception de logiciels. Elle propose une formation de base solide dans les domaines fondamentaux de l'informatique : algorithmique, architecture, réseaux, systèmes d'exploitation, génie logiciel, bases de données, mathématiques pour l'informatique, recherche opérationnelle, recouvrant ainsi tous les grands domaines de l'Informatique.</column>
+            <column name="ID">4</column>
+            <column name="idlinks">7</column>
+            <column name="photo">ubp.png</column>
+        </table>
+        <!-- Table head -->
+        <table name="head">
+            <column name="ID">0</column>
+            <column name="title">Talabard Jérémy</column>
+            <column name="subtitle">Développeur d'applications pour plateformes mobiles</column>
+            <column name="subsubtitle">En recherche de stage</column>
+            <column name="resume">Vous trouverez sur ce site toutes mes formations, mes projets, mes loisirs et toutes mes compétences dans le domaine de l'informatique.</column>
+        </table>
+        <table name="head">
+            <column name="ID">1</column>
+            <column name="title">Formations</column>
+            <column name="subtitle"></column>
+            <column name="subsubtitle"></column>
+            <column name="resume">Pour connaître mon parcours scolaire, universitaire et mes formations professionnelles.</column>
+        </table>
+        <table name="head">
+            <column name="ID">2</column>
+            <column name="title">Projets et Stages</column>
+            <column name="subtitle"></column>
+            <column name="subsubtitle"></column>
+            <column name="resume">Pour connaître les projets que j'ai réalisé au cours de mes différentes formations et mes projets personnels ainsi que pour connaître les stages que j'ai eu la chance de faire.</column>
+        </table>
+        <table name="head">
+            <column name="ID">3</column>
+            <column name="title">Loisirs</column>
+            <column name="subtitle"></column>
+            <column name="subsubtitle"></column>
+            <column name="resume">'Un esprit sain dans un corps sain'</column>
+        </table>
+        <table name="head">
+            <column name="ID">4</column>
+            <column name="title">Emplois</column>
+            <column name="subtitle"></column>
+            <column name="subsubtitle"></column>
+            <column name="resume">Pour connaître mes emplois et pour montrer mes capacités à m'adapter à des environnements différents.</column>
+        </table>
+        <table name="head">
+            <column name="ID">5</column>
+            <column name="title">Mes compétences informatiques</column>
+            <column name="subtitle"></column>
+            <column name="subsubtitle"></column>
+            <column name="resume"></column>
+        </table>
+        <table name="head">
+            <column name="ID">6</column>
+            <column name="title">Administration</column>
+            <column name="subtitle"></column>
+            <column name="subsubtitle"></column>
+            <column name="resume"></column>
+        </table>
+        <!-- Table hobie -->
+        <table name="hobie">
+            <column name="photo">jogging.jpg</column>
+            <column name="title">Course à pied</column>
+            <column name="subtitle">Amateur</column>
+            <column name="date"></column>
+            <column name="resume">La course à pied me permet de me vider l'esprit, mais elle m'apporte aussi un gain de souffle et d'énergie pour les autres sports.</column>
+            <column name="idlinks">12</column>
+            <column name="ID">1</column>
+        </table>
+        <table name="hobie">
+            <column name="photo">theatre.jpg</column>
+            <column name="title">Théâtre</column>
+            <column name="subtitle">Compagnie Pattafyx à Vendat (03)</column>
+            <column name="date"></column>
+            <column name="resume">Je fais du théâtre depuis l'âge de dix ans. Cette activité m'a permis de m'ouvrir vers les personnes, de tenir des longs discours et d'être à l'aise à l'oral.</column>
+            <column name="idlinks">13</column>
+            <column name="ID">2</column>
+        </table>
+        <table name="hobie">
+            <column name="photo">judo.jpg</column>
+            <column name="title">Judo/Jujitsu</column>
+            <column name="subtitle">Licencié au Martres de Veyre (63)</column>
+            <column name="date"></column>
+            <column name="resume">Je pratique le judo depuis 15 ans. Je suis ceinture noire. J'aime ce sport parce qu'il permet de se défouler tout en apprenant à se contrôler. De plus, le code moral est très important, il va au delà du Judo car ces valeurs sont applicables dans la vie en générale.</column>
+            <column name="idlinks">14</column>
+            <column name="ID">3</column>
+        </table>
+        <!-- Table image -->
+        <table name="image">
+            <column name="ID">1</column>
+            <column name="name">Android-Icon.png</column>
+        </table>
+        <table name="image">
+            <column name="ID">64</column>
+            <column name="name">agile.png</column>
+        </table>
+        <table name="image">
+            <column name="ID">3</column>
+            <column name="name">angularjs.png</column>
+        </table>
+        <table name="image">
+            <column name="ID">4</column>
+            <column name="name">bacS.jpg</column>
+        </table>
+        <table name="image">
+            <column name="ID">5</column>
+            <column name="name">benevolat.jpg</column>
+        </table>
+        <table name="image">
+            <column name="ID">6</column>
+            <column name="name">bootstrap.png</column>
+        </table>
+        <table name="image">
+            <column name="ID">7</column>
+            <column name="name">cordova.png</column>
+        </table>
+        <table name="image">
+            <column name="ID">8</column>
+            <column name="name">cplusplus.png</column>
+        </table>
+        <table name="image">
+            <column name="ID">9</column>
+            <column name="name">csharp.png</column>
+        </table>
+        <table name="image">
+            <column name="ID">10</column>
+            <column name="name">css.png</column>
+        </table>
+        <table name="image">
+            <column name="ID">11</column>
+            <column name="name">dev_mobile.png</column>
+        </table>
+        <table name="image">
+            <column name="ID">12</column>
+            <column name="name">eclipse.png</column>
+        </table>
+        <table name="image">
+            <column name="ID">13</column>
+            <column name="name">formation.jpg</column>
+        </table>
+        <table name="image">
+            <column name="ID">14</column>
+            <column name="name">formation.png</column>
+        </table>
+        <table name="image">
+            <column name="ID">15</column>
+            <column name="name">html5.png</column>
+        </table>
+        <table name="image">
+            <column name="ID">16</column>
+            <column name="name">image_anonyme.png</column>
+        </table>
+        <table name="image">
+            <column name="ID">17</column>
+            <column name="name">ionic.png</column>
+        </table>
+        <table name="image">
+            <column name="ID">18</column>
+            <column name="name">IOS.png</column>
+        </table>
+        <table name="image">
+            <column name="ID">19</column>
+            <column name="name">iut.jpg</column>
+        </table>
+        <table name="image">
+            <column name="ID">20</column>
+            <column name="name">JavaFx.png</column>
+        </table>
+        <table name="image">
+            <column name="ID">21</column>
+            <column name="name">java-logo.png</column>
+        </table>
+        <table name="image">
+            <column name="ID">22</column>
+            <column name="name">JeuxVideoImageApp.png</column>
+        </table>
+        <table name="image">
+            <column name="ID">23</column>
+            <column name="name">jogging.jpg</column>
+        </table>
+        <table name="image">
+            <column name="ID">24</column>
+            <column name="name">jolla-sailfish-logo.png</column>
+        </table>
+        <table name="image">
+            <column name="ID">25</column>
+            <column name="name">Jretouch.png</column>
+        </table>
+        <table name="image">
+            <column name="ID">26</column>
+            <column name="name">judo.jpg</column>
+        </table>
+        <table name="image">
+            <column name="ID">27</column>
+            <column name="name">logo_c.png</column>
+        </table>
+        <table name="image">
+            <column name="ID">28</column>
+            <column name="name">logo_js.png</column>
+        </table>
+        <table name="image">
+            <column name="ID">29</column>
+            <column name="name">logo_PDD.png</column>
+        </table>
+        <table name="image">
+            <column name="ID">30</column>
+            <column name="name">logo_ubp.png</column>
+        </table>
+        <table name="image">
+            <column name="ID">31</column>
+            <column name="name">Logo_xcode.png</column>
+        </table>
+        <table name="image">
+            <column name="ID">32</column>
+            <column name="name">logoExcel_VBA.png</column>
+        </table>
+        <table name="image">
+            <column name="ID">33</column>
+            <column name="name">merise.png</column>
+        </table>
+        <table name="image">
+            <column name="ID">34</column>
+            <column name="name">Microsoft-VBA-Large.png</column>
+        </table>
+        <table name="image">
+            <column name="ID">35</column>
+            <column name="name">netbeans.png</column>
+        </table>
+        <table name="image">
+            <column name="ID">36</column>
+            <column name="name">objective-c.png</column>
+        </table>
+        <table name="image">
+            <column name="ID">37</column>
+            <column name="name">osw.png</column>
+        </table>
+        <table name="image">
+            <column name="ID">38</column>
+            <column name="name">patifrais.jpg</column>
+        </table>
+        <table name="image">
+            <column name="ID">39</column>
+            <column name="name">pattern.png</column>
+        </table>
+        <table name="image">
+            <column name="ID">40</column>
+            <column name="name">php.png</column>
+        </table>
+        <table name="image">
+            <column name="ID">41</column>
+            <column name="name">plsql.png</column>
+        </table>
+        <table name="image">
+            <column name="ID">42</column>
+            <column name="name">poker.png</column>
+        </table>
+        <table name="image">
+            <column name="ID">43</column>
+            <column name="name">projet.jpg</column>
+        </table>
+        <table name="image">
+            <column name="ID">44</column>
+            <column name="name">projet.png</column>
+        </table>
+        <table name="image">
+            <column name="ID">45</column>
+            <column name="name">python-logo.png</column>
+        </table>
+        <table name="image">
+            <column name="ID">46</column>
+            <column name="name">qml.png</column>
+        </table>
+        <table name="image">
+            <column name="ID">47</column>
+            <column name="name">qtmobile.png</column>
+        </table>
+        <table name="image">
+            <column name="ID">48</column>
+            <column name="name">Responsive-Design.jpg</column>
+        </table>
+        <table name="image">
+            <column name="ID">49</column>
+            <column name="name">rwd.jpg</column>
+        </table>
+        <table name="image">
+            <column name="ID">50</column>
+            <column name="name">sql.png</column>
+        </table>
+        <table name="image">
+            <column name="ID">51</column>
+            <column name="name">studio-logo.png</column>
+        </table>
+        <table name="image">
+            <column name="ID">52</column>
+            <column name="name">tbf.png</column>
+        </table>
+        <table name="image">
+            <column name="ID">53</column>
+            <column name="name">theatre.jpg</column>
+        </table>
+        <table name="image">
+            <column name="ID">54</column>
+            <column name="name">ubp.png</column>
+        </table>
+        <table name="image">
+            <column name="ID">55</column>
+            <column name="name">uda_logo.jpg</column>
+        </table>
+        <table name="image">
+            <column name="ID">56</column>
+            <column name="name">UML-Logo.png</column>
+        </table>
+        <table name="image">
+            <column name="ID">57</column>
+            <column name="name">vb.png</column>
+        </table>
+        <table name="image">
+            <column name="ID">58</column>
+            <column name="name">vba.png</column>
+        </table>
+        <table name="image">
+            <column name="ID">59</column>
+            <column name="name">Visual-Studio.png</column>
+        </table>
+        <table name="image">
+            <column name="ID">60</column>
+            <column name="name">Windows-Mobile-Logo.png</column>
+        </table>
+        <table name="image">
+            <column name="ID">61</column>
+            <column name="name">Windows-phone-logo.png</column>
+        </table>
+        <table name="image">
+            <column name="ID">62</column>
+            <column name="name">yaml.png</column>
+        </table>
+        <table name="image">
+            <column name="ID">63</column>
+            <column name="name">yii_framework.png</column>
+        </table>
+        <table name="image">
+            <column name="ID">65</column>
+            <column name="name">bootstrap.png</column>
+        </table>
+        <table name="image">
+            <column name="ID">66</column>
+            <column name="name">ionic.png</column>
+        </table>
+        <table name="image">
+            <column name="ID">67</column>
+            <column name="name">java.png</column>
+        </table>
+        <table name="image">
+            <column name="ID">68</column>
+            <column name="name">JavaFx.png</column>
+        </table>
+        <table name="image">
+            <column name="ID">69</column>
+            <column name="name">UML.png</column>
+        </table>
+        <table name="image">
+            <column name="ID">70</column>
+            <column name="name">plsql.png</column>
+        </table>
+        <table name="image">
+            <column name="ID">71</column>
+            <column name="name">vb.png</column>
+        </table>
+        <table name="image">
+            <column name="ID">72</column>
+            <column name="name">GRTGaz.jpg</column>
+        </table>
+        <table name="image">
+            <column name="ID">73</column>
+            <column name="name">geotechniquegeniecivil7.jpg</column>
+        </table>
+        <table name="image">
+            <column name="ID">74</column>
+            <column name="name">screenShotFunnyBird.png</column>
+        </table>
+        <table name="image">
+            <column name="ID">75</column>
+            <column name="name">chemistryQuiz.png</column>
+        </table>
+        <table name="image">
+            <column name="ID">76</column>
+            <column name="name">logo_PM_2.png</column>
+        </table>
+        <table name="image">
+            <column name="ID">77</column>
+            <column name="name">PM.PNG</column>
+        </table>
+        <!-- Table job -->
+        <table name="job">
+            <column name="photo">benevolat.jpg</column>
+            <column name="title">Bénévolat (03)</column>
+            <column name="subtitle">Aide à l'organisation d'événementiel</column>
+            <column name="date">De 2011 à 2016</column>
+            <column name="resume">Au sein de ma compagnie de théâtre, je participe à la réalisation d'un repas afin d'apporter de l'argent pour réaliser les spectacles. Mais j'ai aussi participé à l'organisation de la brocante de mon ancien club de Judo à Vendat (03).</column>
+            <column name="idlinks">8</column>
+            <column name="ID">1</column>
+        </table>
+        <table name="job">
+            <column name="photo">GRTGaz.jpg</column>
+            <column name="title">GRTGaz (03)</column>
+            <column name="subtitle">Agent administratif</column>
+            <column name="date">Eté 2013</column>
+            <column name="resume">Le but de ce travail était de gérer et de trier des documents qui ont été déménagé depuis un autre local. La patience et l'organisation étaient cruciales pour réaliser ce travail.</column>
+            <column name="idlinks">9</column>
+            <column name="ID">2</column>
+        </table>
+        <table name="job">
+            <column name="photo">patifrais.jpg</column>
+            <column name="title">Patifrais (03)</column>
+            <column name="subtitle">Livraison à domicile de produits frais</column>
+            <column name="date">Eté 2013/2014</column>
+            <column name="resume">Le but de ce travail était de faire une tournée en camionnette réfrégérée, dans un secteur géographique précis et de vendre des produits frais comme des viennoiseries, des desserts ou des plats cuisinés à des clients. (ou de trouver des nouveaux clients) C'est un travail compliqué qui nécessite une bonne organisation pour la gestion des stocks et pour suivre correctement la tournée. De plus, il faut être à l'écoute des besoins du client et très autonome.</column>
+            <column name="idlinks">10</column>
+            <column name="ID">3</column>
+        </table>
+        <table name="job">
+            <column name="photo">geotechniquegeniecivil7.jpg</column>
+            <column name="title">Aide Tp pour le concours enseignants CAPLP</column>
+            <column name="subtitle">Lycée P.J. Bonté Riom 63200</column>
+            <column name="date">06 Juin 2016 - 11 Juin 2016</column>
+            <column name="resume">Ce travail avait pour but d'apporter une aide aux candidats du concours dans la phase des Travaux pratiques; étant dans la section Génie Civil option construction les candidats ont forcément besoin d'une aide pour porter et installer du matériel, mesurer, tracer, faire du béton... Cette expérience m'a été bénéfique car j'ai appris différentes choses en construction, j'ai du être autonome et comprendre par moi même.
+Note :  le concours du CAPLP permet d'enseigner dans un lycée professionnel de l'enseignement public.</column>
+            <column name="idlinks">11</column>
+            <column name="ID">4</column>
+        </table>
+        <!-- Table link -->
+        <table name="link">
+            <column name="importance">0</column>
+            <column name="url">1</column>
+            <column name="link">https://www.dropbox.com/s/econ14cdqhhvnet/Talabard_J%C3%A9r%C3%A9my_Note%20Bac.jpg?dl=1</column>
+            <column name="libllink">Talabard_Jérémy_Note Bac.jpg</column>
+            <column name="ID">1</column>
+            <column name="idLinks">4</column>
+            <column name="libl">Note Bac</column>
+        </table>
+        <table name="link">
+            <column name="importance">1</column>
+            <column name="url">0</column>
+            <column name="link">http://www.onisep.fr/Choisir-mes-etudes/Au-lycee-au-CFA/Au-lycee-general-et-technologique/Les-bacs-generaux/Le-bac-S-scientifique</column>
+            <column name="libllink">http://www.onisep.fr/Choisir-mes-etudes/Au-lycee-au-CFA/Au-lycee-general-et-technologique/Les-bacs-generaux/Le-bac-S-scientifique</column>
+            <column name="ID">2</column>
+            <column name="idLinks">4</column>
+            <column name="libl">Détail du BAC S</column>
+        </table>
+        <table name="link">
+            <column name="importance">1</column>
+            <column name="url">1</column>
+            <column name="link">https://www.dropbox.com/s/lp4fufzs432mlb4/Licence_Informatique.pdf?dl=1</column>
+            <column name="libllink">Licence_Informatique.pdf</column>
+            <column name="ID">3</column>
+            <column name="idLinks">7</column>
+            <column name="libl">Détail de la Licence</column>
+        </table>
+        <table name="link">
+            <column name="importance">1</column>
+            <column name="url">1</column>
+            <column name="link">https://www.dropbox.com/s/v40vok4hl8gi3dr/Licence_pro.pdf?dl=1</column>
+            <column name="libllink">Licence_pro.pdf</column>
+            <column name="ID">4</column>
+            <column name="idLinks">6</column>
+            <column name="libl">Détail de la Licence Pro</column>
+        </table>
+        <table name="link">
+            <column name="importance">0</column>
+            <column name="url">1</column>
+            <column name="link">https://www.dropbox.com/s/ccmkkhdj3nicx86/Talabard_J%C3%A9r%C3%A9my_Feuille%20de%20Note_Licence_Pro.pdf?dl=1</column>
+            <column name="libllink">Talabard_Jérémy_Feuille.pdf</column>
+            <column name="ID">5</column>
+            <column name="idLinks">6</column>
+            <column name="libl">Notes Licence</column>
+        </table>
+        <table name="link">
+            <column name="importance">0</column>
+            <column name="url">1</column>
+            <column name="link">https://www.dropbox.com/s/x9m0pi5cutjnl4m/Talabard_J%C3%A9r%C3%A9my_attestation_diplome_licence_pro.jpg?dl=1</column>
+            <column name="libllink">Talabard_Jérémy_attestation_diplome_licence_pro.jpg</column>
+            <column name="ID">6</column>
+            <column name="idLinks">6</column>
+            <column name="libl">Diplôme Licence Pro</column>
+        </table>
+        <table name="link">
+            <column name="importance">1</column>
+            <column name="url">1</column>
+            <column name="link">https://www.dropbox.com/s/x3mk41dh300e3iu/DUT_Info.pdf?dl=1</column>
+            <column name="libllink">DUT_Info.pdf</column>
+            <column name="ID">7</column>
+            <column name="idLinks">5</column>
+            <column name="libl">Détail du DUT</column>
+        </table>
+        <table name="link">
+            <column name="importance">0</column>
+            <column name="url">1</column>
+            <column name="link">https://www.dropbox.com/s/vt73pj7pqwy2xl4/Talabard_J%C3%A9r%C3%A9my_Diplome_DUT.jpg?dl=1</column>
+            <column name="libllink">Talabard_Jérémy_Diplome_DUT.jpg</column>
+            <column name="ID">8</column>
+            <column name="idLinks">5</column>
+            <column name="libl">Diplôme DUT</column>
+        </table>
+        <table name="link">
+            <column name="importance">0</column>
+            <column name="url">1</column>
+            <column name="link">https://www.dropbox.com/s/7uicuneniz98p5l/JeuxVideo.apk?dl=1</column>
+            <column name="libllink">JeuxVideo.apk</column>
+            <column name="ID">9</column>
+            <column name="idLinks">22</column>
+            <column name="libl">APK du Projet</column>
+        </table>
+        <table name="link">
+            <column name="importance">0</column>
+            <column name="url">1</column>
+            <column name="link">https://www.dropbox.com/s/hjp9ch1u3j8o6cn/Pattern.apk?dl=1</column>
+            <column name="libllink">Pattern.apk</column>
+            <column name="ID">10</column>
+            <column name="idLinks">21</column>
+            <column name="libl">APK du Projet</column>
+        </table>
+        <table name="link">
+            <column name="importance">0</column>
+            <column name="url">1</column>
+            <column name="link">https://www.dropbox.com/s/6g1texeuwzwh9xj/Talabard_J%C3%A9r%C3%A9my_Rapport_Stage%20CG.pdf?dl=1</column>
+            <column name="libllink">Talabard_Jérémy_Rapport_Stage CG.pdf</column>
+            <column name="ID">11</column>
+            <column name="idLinks">19</column>
+            <column name="libl">Rapport du Stage</column>
+        </table>
+        <table name="link">
+            <column name="importance">0</column>
+            <column name="url">1</column>
+            <column name="link">https://www.dropbox.com/s/gazbtihtpua3z4r/Talabard_J%C3%A9r%C3%A9my_Poker_Rapport.pdf?dl=1</column>
+            <column name="libllink">Talabard_Jérémy_Poker_Rapport.pdf</column>
+            <column name="ID">12</column>
+            <column name="idLinks">18</column>
+            <column name="libl">Rapport de projet</column>
+        </table>
+        <table name="link">
+            <column name="importance">0</column>
+            <column name="url">1</column>
+            <column name="link">https://www.dropbox.com/s/l5utyj0yngm57ly/Talabard_J%C3%A9r%C3%A9my_Poker%20table.zip?dl=1</column>
+            <column name="libllink">Talabard_Jérémy_Poker table.zip</column>
+            <column name="ID">13</column>
+            <column name="idLinks">18</column>
+            <column name="libl">Code et exécutable de la table de jeu</column>
+        </table>
+        <table name="link">
+            <column name="importance">0</column>
+            <column name="url">1</column>
+            <column name="link">https://www.dropbox.com/s/q47sw5mib8ocdd9/Talabard_J%C3%A9r%C3%A9my_Poker_application.apk?dl=1</column>
+            <column name="libllink">Talabard_Jérémy_Poker_application.apk</column>
+            <column name="ID">14</column>
+            <column name="idLinks">18</column>
+            <column name="libl">Exécutable Android</column>
+        </table>
+        <table name="link">
+            <column name="importance">0</column>
+            <column name="url">1</column>
+            <column name="link">https://www.dropbox.com/s/2sdstv0wn4z41ew/Talabard_J%C3%A9r%C3%A9my_Rapport_Stage%20TBF.pdf?dl=1</column>
+            <column name="libllink">Talabard_Jérémy_Rapport_Stage TBF.pdf</column>
+            <column name="ID">15</column>
+            <column name="idLinks">17</column>
+            <column name="libl">Rapport de Stage</column>
+        </table>
+        <table name="link">
+            <column name="importance">0</column>
+            <column name="url">1</column>
+            <column name="link">https://www.dropbox.com/s/eibgrwn4wu1s4dt/Talabard_J%C3%A9r%C3%A9my_Rapport_Retoucheur%20image.pdf?dl=1</column>
+            <column name="libllink">Talabard_Jérémy_Rapport_Retoucheur_image.pdf</column>
+            <column name="ID">16</column>
+            <column name="idLinks">15</column>
+            <column name="libl">Rapport de projet</column>
+        </table>
+        <table name="link">
+            <column name="importance">0</column>
+            <column name="url">1</column>
+            <column name="link">https://www.dropbox.com/s/gsx98m32g3kyobv/Talabard_J%C3%A9r%C3%A9my_JRetouch.7z?dl=1</column>
+            <column name="libllink">Talabard_Jérémy_JRetouch.7z</column>
+            <column name="ID">17</column>
+            <column name="idLinks">15</column>
+            <column name="libl">Projet</column>
+        </table>
+        <table name="link">
+            <column name="importance">1</column>
+            <column name="url">1</column>
+            <column name="link">https://www.dropbox.com/s/043kynfi17m2kvy/Chemistry%20Quiz.pdf?dl=1</column>
+            <column name="libllink">Quemistry_Quiz.pdf</column>
+            <column name="ID">18</column>
+            <column name="idLinks">24</column>
+            <column name="libl">Rapport</column>
+        </table>
+        <table name="link">
+            <column name="importance">0</column>
+            <column name="url">1</column>
+            <column name="link">https://www.dropbox.com/s/jc5sqf4v48c3o1v/ProjectEnglish.apk?dl=1</column>
+            <column name="libllink">quemistryQuiz.apk</column>
+            <column name="ID">19</column>
+            <column name="idLinks">24</column>
+            <column name="libl">APK du Projet</column>
+        </table>
+        <table name="link">
+            <column name="importance">0</column>
+            <column name="url">1</column>
+            <column name="link">https://www.dropbox.com/s/3p38hxo3s485nrh/Dossier%20Final%20ProjectManagement.pdf?dl=0</column>
+            <column name="libllink">ProjectManagement.pdf</column>
+            <column name="ID">20</column>
+            <column name="idLinks">25</column>
+            <column name="libl">Rapport</column>
+        </table>
+        <table name="link">
+            <column name="importance">0</column>
+            <column name="url">1</column>
+            <column name="link">https://www.dropbox.com/s/uhnalb811ynjd6w/ProjectManagement.rar?dl=1</column>
+            <column name="libllink">ProjectManagement.rar</column>
+            <column name="ID">21</column>
+            <column name="idLinks">25</column>
+            <column name="libl">Application</column>
+        </table>
+        <!-- Table links -->
+        <table name="links">
+            <column name="ID">1</column>
+        </table>
+        <table name="links">
+            <column name="ID">2</column>
+        </table>
+        <table name="links">
+            <column name="ID">3</column>
+        </table>
+        <table name="links">
+            <column name="ID">4</column>
+        </table>
+        <table name="links">
+            <column name="ID">5</column>
+        </table>
+        <table name="links">
+            <column name="ID">6</column>
+        </table>
+        <table name="links">
+            <column name="ID">7</column>
+        </table>
+        <table name="links">
+            <column name="ID">8</column>
+        </table>
+        <table name="links">
+            <column name="ID">9</column>
+        </table>
+        <table name="links">
+            <column name="ID">10</column>
+        </table>
+        <table name="links">
+            <column name="ID">11</column>
+        </table>
+        <table name="links">
+            <column name="ID">12</column>
+        </table>
+        <table name="links">
+            <column name="ID">13</column>
+        </table>
+        <table name="links">
+            <column name="ID">14</column>
+        </table>
+        <table name="links">
+            <column name="ID">15</column>
+        </table>
+        <table name="links">
+            <column name="ID">16</column>
+        </table>
+        <table name="links">
+            <column name="ID">17</column>
+        </table>
+        <table name="links">
+            <column name="ID">18</column>
+        </table>
+        <table name="links">
+            <column name="ID">19</column>
+        </table>
+        <table name="links">
+            <column name="ID">20</column>
+        </table>
+        <table name="links">
+            <column name="ID">21</column>
+        </table>
+        <table name="links">
+            <column name="ID">22</column>
+        </table>
+        <table name="links">
+            <column name="ID">23</column>
+        </table>
+        <table name="links">
+            <column name="ID">24</column>
+        </table>
+        <table name="links">
+            <column name="ID">25</column>
+        </table>
+        <!-- Table project -->
+        <table name="project">
+            <column name="title">JRetouch</column>
+            <column name="photo">Jretouch.png</column>
+            <column name="subtitle">Réalisation d'un logiciel de retouche d'images</column>
+            <column name="resume">Au cours de mon DUT, j'ai réalisé un projet par groupe de quatre. Le but était de faire un logiciel en Java (Swing) en étudiant tout les algorithmes permettant la transformation d'une image, de rendre ce logiciel 'User friendly' et d'apprendre à réaliser un logiciel en groupe tout en mettant au courant notre tuteur de l'avancement du projet grâce à un blog.</column>
+            <column name="idlinks">15</column>
+            <column name="date">Octobre 2013-Mars 2014</column>
+            <column name="ID">1</column>
+        </table>
+        <table name="project">
+            <column name="title">Gestionnaire de planning chez TBF</column>
+            <column name="photo">Microsoft-VBA-Large.png</column>
+            <column name="subtitle">Améliaration d'un outil de planning sous excel</column>
+            <column name="resume">Automatisation de tâches répétitives sous excel grâce à des macros en Visual Basic pour Applications.</column>
+            <column name="idlinks">16</column>
+            <column name="date">Septembre 2014</column>
+            <column name="ID">2</column>
+        </table>
+        <table name="project">
+            <column name="title">Stage chez Transport Blanquet et Fils (63)</column>
+            <column name="photo">tbf.png</column>
+            <column name="subtitle">Amélioration d'un outil de traçabilité</column>
+            <column name="resume">L'outil de traçabilité est utilisé par des chauffeurs pour scanner des sacoches bancaires de sorte à connaître son itinéraire et l'heure de passage. Il a donc fallu reprendre un site internet développé avec le Framework PHP Yii, et aussi améliorer l'application faite sur des appareils Windows Mobile en Visual Basic en apportant plus de fonctionnalités.</column>
+            <column name="idlinks">17</column>
+            <column name="date">Mars 2014-Mai 2014</column>
+            <column name="ID">3</column>
+        </table>
+        <table name="project">
+            <column name="title">Réalisation d'un jeu de poker en réseau</column>
+            <column name="photo">poker.png</column>
+            <column name="subtitle">Création d'un serveur sur ordinateur servant de table de jeu, création d'une application mobile perm</column>
+            <column name="resume">Dans le cadre de ma licence professionnelle, j'ai réalisé un projet avec 2 autres collègues. Nous avons suivi la méthode de travail Scrum. En dix semaines, nous avons découvert JavaFx et réalisé la table de jeu dans ce langage. Nous avons implémenté quasiment toutes les règles du Texas Holdem Poker. Et nous pouvions jouer une partie à plusieurs grâce à une application Android qui permet de voir sa main, de miser mais aussi de se coucher en faisant glisser les cartes pour qu'elles arrivent sur la table de jeu. </column>
+            <column name="idlinks">18</column>
+            <column name="date">Octobre 2014 - Décembre 2014</column>
+            <column name="ID">4</column>
+        </table>
+        <table name="project">
+            <column name="title">Stage Conseil Général du Puy-de-Dôme</column>
+            <column name="photo">osw.png</column>
+            <column name="subtitle">Etude de différentes possibilités pour adapter un site internet existant vers un environnement mobil</column>
+            <column name="resume">Au cours de ce stage, j'ai réalisé des web services permettant d'alimenter en données une future application mobile. Pour réaliser cette application, j'ai étudié différentes possibilités afin de montrer toutes les technologies mobiles au Conseil Général comme le responsive design, une application native Android ou encore une application hybride en Ionic et Cordova.</column>
+            <column name="idlinks">19</column>
+            <column name="date">Février 2015-Juillet 2015</column>
+            <column name="ID">5</column>
+        </table>
+        <table name="project">
+            <column name="title">Réalisation d'un site responsive design (Projet personnel)</column>
+            <column name="photo">rwd.jpg</column>
+            <column name="subtitle">Conception d'un site faisant office de Curriculum Vitae et dans le but de m'entraîner sur des techno</column>
+            <column name="resume">Vous naviguez depuis tout à l'heure sur ce site, c'est moi qui l'ai conçu. Tout d'abord une première version avec Bootstrap et ensuite une seconde en m'inspirant de plusieurs template de responsive design.</column>
+            <column name="idlinks">20</column>
+            <column name="date">Septembre 2015</column>
+            <column name="ID">6</column>
+        </table>
+        <table name="project">
+            <column name="title">Réalisation d'une application Android (Projet personnel)</column>
+            <column name="photo">pattern.png</column>
+            <column name="subtitle">Création d'une application permettant de lister les patrons de conception du Gang of Four</column>
+            <column name="resume">J'ai conçu cette application dans le but de me perfectionner en Android et de me remémorer les patrons de conception. Les données sont liées à une base de données SQLite sur le téléphone, on y trouve aussi des animations.</column>
+            <column name="idlinks">21</column>
+            <column name="date">Octobre 2015</column>
+            <column name="ID">7</column>
+        </table>
+        <table name="project">
+            <column name="title">Réalisation d'une application Android (Projet personnel)</column>
+            <column name="photo">JeuxVideoImageApp.png</column>
+            <column name="subtitle">Création d'une application permettant de récupérer les flux RSS de JeuxVideo.com</column>
+            <column name="resume">J'ai conçu cette application dans le but de me perfectionner en Android. Des données sont stockées dans une base SQLite,le contenu de cette base est téléchargé depuis une URL. Le reste des données est mis à jour via une connexion internet en parsant des flux RSS. J'utilise dans cette application un SwipeRefreshLayout qui permet de rafraîchir une liste mais aussi des WebView et des VideoView. </column>
+            <column name="idlinks">22</column>
+            <column name="date">Novembre 2015</column>
+            <column name="ID">8</column>
+        </table>
+        <table name="project">
+            <column name="title">Funny Bird</column>
+            <column name="photo">screenShotFunnyBird.png</column>
+            <column name="subtitle">Application Android </column>
+            <column name="resume">Jeux fait avec Unity 3D s'inspirant du célèbre Flappy Bird.</column>
+            <column name="idlinks">23</column>
+            <column name="date">Janvier 2016</column>
+            <column name="ID">9</column>
+        </table>
+        <table name="project">
+            <column name="title">Chemistry Quiz</column>
+            <column name="photo">chemistryQuiz.png</column>
+            <column name="subtitle">Application Android de question de chimie</column>
+            <column name="resume">Dans le cadre du cours d'anglais de ma L3 informatique, j'ai réalisé une application Android posant des questions sur la chimie. Le joueur a 15 secondes pour répondre aux questions. Quand le joueur répond correctement il accumule des points pour changer de niveau. Quand le niveau change la difficultés change aussi. On saisit les questions dans un fichier XML, les questions sont ensuite transformés en requête sqlite via XSLT puis télécharger pour alimenter la base de données locale du téléphone.</column>
+            <column name="idlinks">24</column>
+            <column name="date">Mars 2016</column>
+            <column name="ID">10</column>
+        </table>
+        <table name="project">
+            <column name="title">Project Management</column>
+            <column name="photo">PM.PNG</column>
+            <column name="subtitle">Logiciel de gestion de projet</column>
+            <column name="resume">Au cours de la troisième année de licence informatique, il nous a été demandé de réaliser un projet par groupe. Nous étions deux pour concevoir cet outil.
+Notre projet consiste à développer un logiciel capable de créer des diagrammes de PERT et de GANTT qui sont utilisés dans la gestion de projet et permettent de planifier un projet de façon global. Le résultat attendu est un logiciel capable de gérer un projet dans le temps selon des échéances et des ressources ayant des capacités différentes.</column>
+            <column name="idlinks">25</column>
+            <column name="date">Février 2016 - Mai 2016</column>
+            <column name="ID">11</column>
+        </table>
+        <!-- Table user -->
+        <table name="user">
+            <column name="id">jetalabard</column>
+            <column name="password">9*65C08ab</column>
+        </table>
+    </database>
+</pma_xml_export>
